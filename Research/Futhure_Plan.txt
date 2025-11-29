@@ -1,0 +1,47 @@
+Urządzenie Komponenty:
+
+-> Arduino Uno R3 serce systemu 
+
+-> Servo - Zawór wody z rezerwuaru na górze systemu
+
+-> DHT11 - Czujnik temperatury i wilgotności powietrza
+ 
+-> MQ9 czujnik 
+
+-> Soil Moisture Sensor
+
+-> Czujnik chałasu
+
+-> Czujnik naświetlenia (fotorezystor) do śledzenia słońca dla paneli które mają się obracać
+
+-> Czujnik płomieni 
+
+-> (może) system bloutooth do zarządania systemem i pobierania danych
+
+-> ekran oled do wyświetlania danych na żywo na dole systemu 
+
+-> Servo do kręcenia panelem słonecznym 
+
+-> czujnik napełnienia zbiornika
+
+Górny rząd -> panele słoneczne obracane na słońce do zasilania systemu i generowania energii
+Jeden hex -> serce systemu, największe stężenie czujnikó
+zwykły hex -> mech i kilka czujników kontrolujące stan mchu na żywo
+
+Materiał do kontrukcji hexagonów musi być wytrzymały, ekologiczny odoprny na warunki atmosferyczne 
+
+System nawadniania jest cześcią modułów, przy ich łączeniu 
+
+Gatunek Mchu Jaki będzie najlepszy do takiego zastosowania
+
+Wątpliwości:
+-> wilgoć zagrażająca budynkom -> odsunięcie ściany mchu od ściany budynku?
+-> rozrost mchu poza wyznaczone strefy
+-> analiza dlaczego podobne projekty nie zadziałały i dlaczego ten zadziała
+-> koszty dla inwestorów (czy warto montować to na własnym budybku?) ROI
+-> zyski ekologiczne czy to się w ogóle opłaca robić
+-> dlaczego hardware jest kluczowy? czemu nie można zrobić tego bez tego?
+-> Czy mech nie umrze?
+
+
+

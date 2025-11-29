@@ -1,0 +1,117 @@
+Sexy-Hexy
+
+Modular system of hexes filled with moss, to be installed on the outside of buildings
+
+command hex -> the only one with an Arduino module, still has moss
+
+display hex -> lower with screen so passerbys can view air quality and other data
+
+common hex -> moss and a few sensors: water, temp, air quality
+
+solar panel hex -> for the top row hexes, no moss just a solar panel that can rotate to get the optimal sun angle
+
+led hex -> for the bottom row hexes, provides some light for the street below
+
+Auxiliaries:
+
+Energy storage for what the solars collect, water storage for rain water
+
+Connectors for each hex have tubes for distributing water, the gutters of the building also feed into this system for irrigating moss, the gravity will pull the water downwards so no pump needed.
+
+The solar and led hexes are optional.
+
+Business:
+The hexes can help old buildings meet emmsions regulations, are good insulators, look green and improve mood (green = happy bc science),
+Turn co2 into oxygen moss is very efficient at it, moss doesn't require soil and has good survivability. Moss is also a good sound isolator so buildings near highways and railroads have additional incentive
+
+Material:
+Biodegradable PLA -> need to check if this can survive being outside
+
+
+Construction:
+Hexagonal frame, moss insert (these are independent so can just one at the time can be changed)
+In the hex frame we mount the sensors and in the connectors we mount pipes for watering the moss. no need for additional pipes as hexes will have canalas in them.
+
+
+Sensors and usage in the common hex:
+
+soil Moisture sensor ->
+air Moisture sensor ->
+Temperature sensor ->
+MQ9 sensor ->
+MQ2 sensor ->
+Smog sensor mq2 ->
+sound sensor -> display noise pollution 
+flame sensor -> moss is flammable so if we detect fire we just dump the whole water reservoir to save the installation and building
+
+liquid level sensor telling the brain how much water is left in the tank
+
+
+optionally sd card module to log data
+
+
+
+in more detail:
+
+
+
+1. Internal Maintenance Sensors (Keeping the Moss Alive)
+
+These sensors justify the "Stability of operation" and "Ergonomics".
+
+    Soil Moisture Sensor (Capacitive): "The Thirst Monitor"
+
+        Purpose: Since moss doesn't have deep roots, it dries out fast. This sensor triggers the valve to release gravity-fed water from the tubes.
+
+        Placement: Buried directly in the moss substrate in the "Command" or "Common" hex.
+
+    Air Moisture (Humidity) Sensor:
+
+        Purpose: Moss absorbs water through its leaves. High humidity is good; low humidity means the system needs to water more frequently to compensate for evaporation.
+
+    Liquid Level Sensor:
+
+        Purpose: Placed in the top water storage. It alerts the "Display Hex" to show a "Low Water" icon so a maintenance worker knows to refill it (if rain hasn't been sufficient).
+
+2. Ecological & Urban Data Sensors (The "Business" Pitch)
+
+These provide the data for "Presentation of real ecological impact".
+
+    MQ-9 Sensor: "The Traffic Monitor"
+
+        Purpose:the MQ-9 excels at detecting Carbon Monoxide (CO). Since these are mounted on buildings near streets, this sensor measures pollution from car exhausts.
+
+        Metric: "Our system detected unsafe CO levels at street level 15 times today."
+
+    Temperature Sensor:
+
+        Purpose: Measures the "Urban Heat Island" effect.
+
+        Comparison: You can have one sensor inside the moss and one exposed to the air. Show that the moss stays cooler, proving the insulation business case.
+
+    Sound Sensor (Microphone): "The Noise Pollution Logger"
+
+        Purpose: You mentioned moss is a sound isolator. This sensor logs decibel levels.
+
+        Business logic: "Apartments with Sexy-Hexy installed experience 30% less street noise."
+
+3. Safety & Emergency Sensors (The "Innovation" Factor)
+
+    MQ-2 Sensor: "The Smog & Smoke Scout"
+
+        Purpose: the MQ-2 is best for Smoke and LPG. Its purpose here is Early Fire Detection (smoldering) before visible flames appear.
+
+        Note on Smog: If you want to detect actual "Smog" (Particulate Matter/Dust), you usually need a laser sensor (like SDS011). However, for the hackathon, you can claim the MQ-2 is detecting "combustible industrial gases" as a proxy for smog.
+
+    Flame Sensor (IR): "The Fail-Safe Trigger"
+
+        Purpose: The MQ-2 detects smoke, but the Flame Sensor detects actual fire (Infrared light).
+
+        Action: If this triggers, the Arduino opens the solenoid valve on the water tank fully, flooding the moss to prevent the dry biomaterial from becoming a fire hazard.
+
+4. Data Logging
+
+    SD Card Module:
+
+        Purpose: "Black Box" recording. If the power goes out or WiFi fails, you still have the environmental data to prove your efficiency claims to the judges.s
+
