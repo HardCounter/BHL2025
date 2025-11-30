@@ -16,17 +16,15 @@ echo "Creating new tmux session: $SESSION_NAME"
 tmux new-session -d -s $SESSION_NAME -n "Monitoring"
 
 # Start the server in the first pane
-tmux send-keys -t $SESSION_NAME:0.0 "source venv/bin/activate" C-m
 tmux send-keys -t $SESSION_NAME:0.0 "cd ArduinoServer" C-m
-tmux send-keys -t $SESSION_NAME:0.0 "python run.py" C-m
+tmux send-keys -t $SESSION_NAME:0.0 "source .venv/bin/activate && python run.py" C-m
 
 # Split the window vertically
 tmux split-window -v -t $SESSION_NAME:0
 
 # Start the reader in the second pane
-tmux send-keys -t $SESSION_NAME:0.1 "source venv/bin/activate" C-m
 tmux send-keys -t $SESSION_NAME:0.1 "cd ArduinoServer" C-m
-tmux send-keys -t $SESSION_NAME:0.1 "python -m app.reader" C-m
+tmux send-keys -t $SESSION_NAME:0.1 "source .venv/bin/activate && python -m app.reader" C-m
 
 # Attach to the session
 tmux attach-session -t $SESSION_NAME
