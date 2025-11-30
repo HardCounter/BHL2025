@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { ChartDataPoint } from "@/types/sensor-data";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = import.meta.env.VITE_BASE_API_URL;
 
 const fetchChartData = async (
   field: string,
